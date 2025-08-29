@@ -33,13 +33,10 @@ Ultimately, this site is inteded to be more of an educational tool than a genuin
 
 **Note** The Odds API rejects requests automatically if the request origin is null. This means that if you try running the site locally by opening the html files directly in browser, you will be able to see all the content and navigate everywhere, but pressing go on any of the tools will not return anything regardless of user input. To ensure API calls succeed, run the site from a deployed environment so that the request includes a valid origin header. I have also included the link to my deployed site above for this very reason.
 
----
 
 ### IF YOU ONLY WANT TO VIEW:
 1. Clone or download the repository.
 2. Place files into a folder and open index.html in a web browser.
-
----
 
 ### IF YOU WANT ACTUAL FUNCTIONALITY:
 1. Clone or download the repository.
