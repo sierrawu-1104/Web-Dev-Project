@@ -21,7 +21,7 @@ Ultimately, this site is inteded to be more of an educational tool than a genuin
 
 ## This site contains:
 
-1. Intuitive web design with a multipage structire and a consistent/easy to understand layout (header, hero banners, panels, footer, input boxes, dropdown menu, etc.)
+1. Intuitive web design with a multipage structure and a consistent/easy to understand layout (header, hero banners, panels, footer, input boxes, dropdown menu, etc.)
 2. Light/Dark theme toggle that remembers the user preference (using localStorage)
 3. Accessibility features such as a skip-to-content link for every page, visible focus outlines, keyboard navigability (tabbing), and high-contrast color schemes that are easy to read
 4. Integration with a third-party API (The Odds API) for live sports betting data.
