@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>About • Arbitrage Scanner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="site-header"><div class="container nav">
+    <a href="./index.html">Home</a>
+    <a href="./about.html" aria-current="page">About</a>
+    <span class="divider"></span> <!-- not clickable, just a divider -->
+    <a href="./nba.html">NBA</a>
+    <a href="./nfl.html">NFL</a>
+    <a href="./mlb.html">MLB</a>
+    <a href="./nhl.html">NHL</a>
+    <a href="./epl.html">EPL</a>
+    <span class="divider"></span> <!-- not clickable, just a divider -->
+    <a href="./contact.html">Contact</a>
+</div></header>
+  <section class="hero hero--about"><h1>About</h1></section>
+  <main id="main" class="container centered">
+    <div class="panel">
+      <h2>The Idea</h2>
+      <p>I think it's fair to say that for the vast majority of us, college can be a struggle. While even having the opportunity to attend one still makes us incomprehensibly more privileged and sheltered than 99% of the world, it doesn't change that fact that having little to no spending money is AT LEAST mildly annoying. Conceived from endless nights of browsing reddit threads and a burning desire for somewhat consistent passive income, I am proud to present Wu's Arbitrage Scanner!</p>
+      <p>Before I explain how everything works with the concept and this website, I did want to preface that there are disconcertingly many people online who claim this is some sort of flawless get rich quick scheme——I would like to emphasize that this is in fact NOT that. There are plenty of things that could go wrong such as (but not limited to) unreliable bookmakers, player injuries, and getting limited/banned by certain sportsbooks for essentially gaming the system. If anything sounds too good to be true it either is completely false, or in this case just isn't as simple or foolproof as it might seem on the surface. Ultimately what I'm trying to say is don't quite your day job.</p>
+      <p>And if you're like me and don't have a job at all yet, certainly don't stop looking for one.</p>
+
+      <h2>What is Arbitrage Sports Betting?</h2>
+      <p>I'm not going to bother going into specific details or tedious nuances——especially since a simple google search can provide countless resources and websites that could do so far better than I could——but I do think one of the things all of those sources lack is a concise and simple overview that uses normal/stupid people terminology (something I certainly wish I had access to).</p>
+      <p>Using the American odds system, +x00 means betting 100 yields x00 in profit, and -x00 means betting x00 yields 100 in profit. For example, betting 200 on a -200 line pays out 300 (100 in profit), and betting 100 on a +200 line pays out 300 as well (but this time 200 in profit). An arbitrage opportunity (originally a term for buying and selling stocks at marginal differences across different brokerages) occurs in this context when the all possible outcomes of a certain play or match end up collectively having longer odds (higher +###, lower -###) than they should due to errors that bookmakers make. If you do the math and place the correct stake on each side of a bet on the different bookmakers that determined the odds, you can essentially guarantee a slight % profit.</p>
+
+      <h2>How This Site Works</h2>
+      <p>This site fetches odds from <strong>The Odds API</strong> (you'll have to find and get an api key for yourself, although there is a free plan last I checked), finds cross-book arbitrage for moneylines, spreads, and totals, and calculates stake splits for equalized payout based on your total bankroll (budget).</p>
+
+      <p>For the purposes of this site, the functionality is limited to pre-game straight bets that have two total possible outcomes. If you really want to jump in the deep end there are also parlay arbitrage opportunities as well as live-betting arbitrage, but they all come with their own complications and risks so explore for yourself at your own discretion.</p>
+
+      <p>Aaaand that’s about it! I don’t want this to become an unbearably long read so without further ado go ahead and play around with the tools!</p>
+
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container small">
+      <button id="theme-toggle" aria-label="Toggle light/dark theme">🌙</button>
+    </div>
+  </footer>
+  <script src="./js/theme.js"></script>
+</body>
+</html>

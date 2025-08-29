@@ -1,0 +1,194 @@
+
+:root{
+  /* CSS variables – define site-wide color schemes, in this case I'm using a dark cerulean theme alongside grey */
+  --bg:#1a1a1a;            /* dark grey background */
+  --panel:#262626;         /* slightly lighter panel background */
+  --text:#e7ecff;          /* default text color */
+  --aria-current:#154163;  /* color for current nav outline (aria-current) */
+  --accent:#154163;        /* cerulean accent (buttons, hovers, headers, input boxes etc.) */
+}
+
+*{box-sizing:border-box} /* include some padding/border for element width */
+
+html{scroll-behavior:smooth} /* smooth scrolling for skip links (used for accessibility when keyboard navigating) */
+
+
+body{
+  margin:0; background:var(--bg); color:var(--text);
+  font:16px/1.5 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+}
+
+/* utility container for max width */
+.container{max-width:1100px; margin:auto; padding:1rem}
+
+
+.site-header{background:linear-gradient(180deg,var(--panel),transparent); border-bottom:1px solid rgba(255,255,255,.1)}
+
+/* navigation styling */
+.nav{display:flex; gap:1rem; align-items:center; flex-wrap:wrap}
+.nav a{color:var(--text); text-decoration:none; padding:.5rem .8rem; border-radius:10px}
+.nav a:hover{background:var(--accent);}
+.nav a[aria-current="page"]{outline:3px solid var(--aria-current); outline-offset:2px}
+
+/* hero banner styling */
+.hero{position:relative; height:36vh; min-height:220px; display:grid; place-items:center; border-bottom:1px solid rgba(255,255,255,.14); overflow:hidden}
+.hero::before{content:""; position:absolute; inset:0; background-size:cover; background-position:center; filter:saturate(1.2) contrast(1.1); opacity:.55}
+.hero::after{content:""; position:absolute; inset:0; background:radial-gradient(ellipse at 60% 40%, rgba(0,0,0,.25), rgba(0,0,0,.65))}
+.hero h1,.hero p{position:relative; margin:0; text-align:center; color: #fff;}
+
+.hero h1 {
+  font-size: clamp(1.6rem, 2.2vw + 1rem, 2.8rem);
+  margin-bottom: 0;
+}
+
+.hero h1,
+.hero p {
+  line-height: 1.8;
+}
+
+
+/* determines what image to use for all of the hero banner images on the pages */
+.hero--nba::before{ background-image: url("../img/hero-nba.jpg")}
+.hero--nfl::before{ background-image: url("../img/hero-nfl.jpg")}
+.hero--mlb::before{ background-image: url("../img/hero-mlb.jpg")}
+.hero--nhl::before{ background-image: url("../img/hero-nhl.jpg")}
+.hero--epl::before{ background-image: url("../img/hero-epl.jpg")}
+.hero--about::before{ background-image: url("../img/hero-about.jpg")}
+.hero--contact::before{ background-image: url("../img/hero-contact.jpg")}
+.hero--home::before{ background-image: url("../img/hero-home.jpg")}
+
+
+/* Content panels (card-style blocks for easy reading) */
+.panel{background:linear-gradient(180deg, var(--panel),#1a1a1a); border:1px solid rgba(255,255,255,.15); border-radius:14px; padding:1rem; margin-block:1rem}
+
+.grid{display:grid; gap:.8rem; grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+label{display:flex; flex-direction:column; gap:.25rem; font-weight:600}
+input,select,button{padding:.6rem; border-radius:10px; border:1px solid rgba(255,255,255,.25); background:var(--accent); color:white}
+
+/* focus outline for keyboard nav */
+input:focus,select:focus,button:focus,a:focus{outline:3px solid var(--focus); outline-offset:2px}
+
+/* button stuff (styling and actions) */
+.actions{display:flex; gap:.6rem; align-items:center; flex-wrap:wrap}
+.btn{background:linear-gradient(180deg,var(--accent),#0f2f42); border:1px solid black; cursor:pointer}
+
+/* table stuff (styling and rendering)*/
+.table-wrap{overflow:auto; border:1px solid rgba(255,255,255,.12); border-radius:12px}
+table{width:100%; border-collapse:collapse}
+th,td{padding:.6rem; border-bottom:1px solid rgba(255,255,255,.08); text-align:left; vertical-align:top}
+thead th{position:sticky; top:0; background:var(--accent);}
+
+
+.badge{display:inline-block; padding:.1rem .5rem; border:1px solid rgba(255,255,255,.25); border-radius:999px; font-size:.85rem}
+
+/* footer styling */
+.site-footer{border-top:1px solid rgba(255,255,255,.12); margin-top:2rem}
+.centered{max-width:800px; margin:auto}
+
+/* mobile adjustments for optimal viewing */
+@media (max-width: 640px){ .hero{height:28vh} }
+
+
+
+/* nav bar spacer lines */
+
+.divider {
+  display: inline-block;
+  width: 1px;
+  height: 1.2em;
+  background: rgba(255,255,255,.4);
+  margin: 0 1rem;
+  vertical-align: middle;
+}
+
+
+/* theme toggle stuff */
+#theme-toggle {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  position: relative;
+}
+
+/* light theme overrides */
+html.light {
+  --bg: #fdfdfd;
+  --panel: #f1f1f1;
+  --text: #111;
+  --muted: #444;
+  --accent: #154163;
+  --aria-current: #154163;
+}
+
+html.light .site-header,
+html.light .panel,
+html.light .site-footer {
+  border-color: rgba(0,0,0,.1);
+}
+
+html.light .panel {
+  background: linear-gradient(180deg, #ffffff, #e6e6e6); /* white → light grey */
+  border: 1px solid rgba(0,0,0,.1);
+}
+
+/* Make contact page panel wider to align with footer*/
+.panel--wide {
+  max-width: 100%;
+}
+
+/* Contact page columns layout */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.contact-text h2 {
+  margin-top: 0;
+}
+
+.contact-photo img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+
+/* Keyboard navigatable stuff */
+a:focus, button:focus, input:focus, select:focus, textarea:focus {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--accent);
+  color: #fff;
+  padding: .5rem 1rem;
+  z-index: 100;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 0; /* slide into view when focused */
+}
+
