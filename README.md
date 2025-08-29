@@ -53,7 +53,8 @@ Ultimately, this site is inteded to be more of an educational tool than a genuin
 
 ## STRUCTURE:
 
-├── index.html    (Home page)
+```
+├── index.html      (Home page)
 ├── about.html
 ├── contact.html
 ├── nba.html
@@ -62,12 +63,13 @@ Ultimately, this site is inteded to be more of an educational tool than a genuin
 ├── nhl.html
 ├── epl.html
 ├── css/
-│ └── styles.css  (Global styles and theme)
+│   └── styles.css  (Global styles and theme)
 ├── js/
-│ ├── app.js      (Odds API integration + arbitrage calculations)
-│ ├── page.js     (Page-specific setup—-detects what sport via body data attribute)
-│ └── theme.js    (Theme toggle logic)
-└── img/          (Hero images and about me photo)
+│   ├── app.js      (Odds API integration + arbitrage calculations)
+│   ├── page.js     (Page-specific setup—-detects what sport via body data attribute)
+│   └── theme.js    (Theme toggle logic)
+└── img/            (Hero images and about me photo)
+```
 
 ---
 
