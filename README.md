@@ -12,7 +12,7 @@ Ultimately, this site is inteded to be more of an educational tool than a genuin
 
 ## VIDEO DEMO LINK:
 
-## WEBSITE LINK (if you don't want to go through the trouble of running locally): 
+## WEBSITE LINK (if you don't want to go through the trouble of running locally): https://sierrawu-1104.github.io/Web-Dev-Project/
 
 ## TEST API KEY: 
 `95e9bad34f1ccbb0d32baa89f2b35e1d`
