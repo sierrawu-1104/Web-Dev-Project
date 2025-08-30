@@ -10,7 +10,7 @@ Ultimately, this site is inteded to be more of an educational tool than a genuin
 
 ---
 
-## VIDEO DEMO LINK:
+## VIDEO DEMO LINK: https://drive.google.com/file/d/11tWejY6unYU_bV2mX7P9hbWjwmmMhH9n/view?usp=sharing
 
 ## WEBSITE LINK (if you don't want to go through the trouble of running locally): https://sierrawu-1104.github.io/Web-Dev-Project/
 
